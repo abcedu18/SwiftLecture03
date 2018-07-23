@@ -9,17 +9,45 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var lbName: UILabel!
+    
+    @IBOutlet weak var btnConfirm: UIButton!
+    
+    @IBOutlet weak var touchView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func click(_ sender: Any) {
+        lbName.text="Tao Feng"
+//        
+//      let button = sender as! UIButton;
+//        
+//      button.setTitle("OK", for: UIControlState.normal)
+        
     }
-
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesBegan")
+        
+        if let touch=touches.first{
+            let loc=touch.location(in:self.touchView)
+            
+            print("\(loc)")
+            
+            if(self.touchView.bounds.contains(loc)){
+                self.touchView.backgroundColor=UIColor.red
+            }else{
+                self.touchView.backgroundColor=UIColor.blue
+            }
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+      print("touchesEnded")
+       
+    }
+    
 }
 

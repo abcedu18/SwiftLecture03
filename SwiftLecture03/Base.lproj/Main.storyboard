@@ -30,12 +30,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08A-tX-bDK">
                                 <rect key="frame" x="16" y="56" width="343" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXZ-0z-nPT"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C16-XP-T6T">
+                                <rect key="frame" x="67" y="164" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.96316909306837128" blue="0.18572081517058581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NMu-Rk-Fmi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3zc-Pk-Nx1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08A-tX-bDK" secondAttribute="trailing" constant="16" id="A6V-Sq-NN6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08A-tX-bDK" secondAttribute="trailing" constant="16" id="CG0-gA-JqV"/>
                             <constraint firstItem="08A-tX-bDK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LQo-Ov-1jJ"/>
                             <constraint firstItem="NMu-Rk-Fmi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="OLA-i6-20i"/>
                             <constraint firstItem="08A-tX-bDK" firstAttribute="top" secondItem="NMu-Rk-Fmi" secondAttribute="bottom" constant="8" id="U4f-TM-mUI"/>
@@ -43,10 +52,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnConfirm" destination="08A-tX-bDK" id="xUQ-nn-Szm"/>
+                        <outlet property="lbName" destination="NMu-Rk-Fmi" id="c05-Wt-Csv"/>
+                        <outlet property="touchView" destination="C16-XP-T6T" id="ZMy-FG-gRQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-297" y="-92"/>
         </scene>
     </scenes>
 </document>
